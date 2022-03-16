@@ -1,2 +1,39 @@
+.box {
+  width: 500px;
+  height: 800px;
+}
+
+.box1 {
+  background: orange;
+}
+.box2 {
+  background: green;
+}
+.box3 {
+  background: yellow;
+}
+.box4 {
+  background: pink;
+}
+.box5 {
+  background: blueviolet;
+}
 
 
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

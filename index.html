@@ -35,6 +35,8 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/modernizr-custom.js"></script>
+    <script src="./js/imagesloaded.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
 
     <!-- CSS-->
     <link rel="stylesheet" href="css/custom.css">
@@ -47,8 +49,50 @@
   </head>
   <body>
     <main>
-     
+     <div class="box box1" data-trigger></div>
+     <div class="box box2" data-trigger></div>
+     <div class="box box3" data-trigger></div>
+     <div class="box box4" data-trigger></div>
+     <div class="box box5" data-trigger></div>
     </main>
+
+
+    <script>
+      let box1 = document.getElementsByClassName("box1")[0];
+      let box2 = document.getElementsByClassName("box2")[0];
+      let numb = 30;
+      let plus = 30;
+
+      let interv = setInterval(() => {
+        box1.style.transform = `translateX(${numb}px)`;
+        if ( numb > 300 ) {
+          plus *= -1;
+        } else if ( numb < 30) {
+          plus *= -1;
+        }
+        numb += plus;
+      }, 1000);
+
+      box1.addEventListener("click", () => {
+        clearInterval(interv);
+      })
+
+      box2.addEventListener("click", () => {
+        interv = setInterval(() => {
+        box1.style.transform = `translateX(${numb}px)`;
+        if ( numb > 300 ) {
+          plus *= -1;
+        } else if ( numb < 30) {
+          plus *= -1;
+        }
+        numb += plus;
+      }, 1000);
+      })
+    </script>
+
+    <style>
+      .box1 {transition : 0.5s ease-out}
+    </style>
   </body>
 
 </html>
