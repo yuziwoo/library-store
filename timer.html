@@ -12,9 +12,9 @@
   <body>
     <main>
      <div class="time_wrapper">
-       <span class="time_hour">00</span>
-       <span class="time_min">00</span>
-       <span class="time_sec">00</span>
+       <span class="time_hour"></span>
+       <span class="time_min"></span>
+       <span class="time_sec"></span>
      </div>
     </main>
 
@@ -34,15 +34,27 @@
       let sec = document.getElementsByClassName("time_sec")[0];
 
       let date_value = date_target.getTime() - date_now.getTime();
+
+      let time_sec = Math.floor(date_value / 1000);
+      let time_min = Math.floor(time_sec / 60);
+      let time_hour = Math.floor(time_min / 60);
+
+      if (date_value < 0) {
+          date_value = 0;
+        }
+
+        hour.innerText = time_hour;
+        min.innerText= time_min % 60;
+        sec.innerText= time_sec % 60;
       
 
       let time_reset = setInterval(() => {
         date_now = new Date();
         date_value = date_target.getTime() - date_now.getTime();
 
-        let time_sec = Math.floor(date_value / 1000);
-        let time_min = Math.floor(time_sec / 60);
-        let time_hour = Math.floor(time_min / 60);
+        time_sec = Math.floor(date_value / 1000);
+        time_min = Math.floor(time_sec / 60);
+        time_hour = Math.floor(time_min / 60);
 
         if (date_value < 0) {
           date_value = 0;
