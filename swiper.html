@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Swiper</title>
+
+    <!-- 호환성 및 뷰포트 -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, height=device-height, user-scalable=no' />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!-- CDN  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/> <!-- 또는 css파일 직접 불러와도됨  -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> 
+
+    <style>
+      .swiper {
+        width: 600px;
+        height: 300px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <main>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-scrollbar"></div>
+      </div>     
+    </main>
+
+    <script>
+      const swiper = new Swiper('.swiper', {
+        // 자주 쓰는
+        direction: 'horizontal', // 가로 : horizontal (기본값), 세로 : vertical
+        loop: true,
+
+        // 자주 사용하진 않지만 중요한
+        /**
+        allowSlideNext: 'true', // false 설정 시 다음 슬라이드로 안 넘어감
+         * /
+
+        // 페이징
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // 좌우 버튼
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // 스크롤바
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      })
+      
+      // 메소드
+      // swiper.slideNext(); // 다음 슬라이드로 넘김
+    </script>
+
+    <style>
+      
+    </style>
+  </body>
+
+</html>
