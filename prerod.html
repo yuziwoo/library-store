@@ -18,16 +18,15 @@
 
     <title>프리오더 제목</title>
     
-    <link rel="stylesheet" href="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/1906/common.css" /> <!-- 변경필요 -->
-    <link rel="stylesheet" href="common.css" /> <!-- 변경필요 -->
-    <link rel="stylesheet" href="preord.css" /> <!-- 변경필요 -->
+    <link rel="stylesheet" href="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/common.css" />
+    <link rel="stylesheet" href="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/preord.css" />
 
-    <script src="common.js"></script> <!-- 변경필요 -->
-    
+    <script src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/common.js"></script>
+
     <style>
         /* Contents CSS */
         body {
-            /* overflow: hidden; */
+            overflow: hidden;
         }
 
         .content {
@@ -47,7 +46,7 @@
         }
 
         .ver_pc .banner:nth-child(1) .logo figure img {
-          width: 270px;
+          max-width: 270px;
           transform: translateX(80px);
           -moz-transform: translateX(80px);
           -ms-transform: translateX(80px);
@@ -55,7 +54,7 @@
         }
 
         .ver_mob .banner:nth-child(1) .logo figure img {
-          width: 170px;
+          max-width: 140px;
         }
 
         .banner:nth-child(2) {
@@ -71,18 +70,19 @@
         }
 
         .ver_mob .banner:nth-child(2) .logo figure img {
-          width: 120px;
+          width: 100px;
         }
+
     </style>
   </head>
   <body>
     <!-- Contents -->
     <main class="content_wrap">
       <div class="content">
-        <section class="intro txt-center">
+        <section class="intro txt_center">
           <div class="logo">
             <figure>
-              <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/logo@2x.png?w=1790" alt="logo">
+              <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/logo@2x.png" alt="logo">
             </figure>
           </div>
           <h5 class="collection fs22 archivo fw500">
@@ -106,14 +106,14 @@
             <li class="mdpick_box">
               <div class="img_big for_pc">
                 <figure>
-                  <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/pick01_big.jpg?w=1819" alt="Item iamge">
+                  <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/pick01_big.jpg" alt="Item iamge">
                 </figure>
               </div>
               <div class="info">
                 <div class="img_small">
                   <figure>
                     <img class="for_pc" src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/pick01_small.jpg" alt="Item image">
-                    <img class="for_mob" src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/m_pick01_small.jpg?w=347" alt="Item image">
+                    <img class="for_mob" src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/m_pick01_small.jpg" alt="Item image">
                   </figure>
                 </div>
 
@@ -140,7 +140,7 @@
                 <div class="img_small">
                   <figure> 
                     <img class="for_pc" src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/pick02_small.jpg" alt="Item image">
-                    <img class="for_mob" src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/m_pick02_small.jpg?w=347" alt="Item image">
+                    <img class="for_mob" src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/m_pick02_small.jpg" alt="Item image">
                   </figure>
                 </div>
 
@@ -162,7 +162,7 @@
 
               <div class="img_big for_pc">
                 <figure>
-                  <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/pick02_big.jpg?w=1819" alt="Item iamge">
+                  <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/pick02_big.jpg" alt="Item iamge">
                 </figure>
               </div>
             </li>
@@ -173,7 +173,7 @@
         <section class="banner_wrap">
           <!-- brand -->
           <div class="banner">
-            <a class="banner_link" type="/brand/detail/$IjN?brandId=62&brandName=BURBERRY&includeOutOfStock=false&sort=updatedAt&price=all&pageNo=1">
+            <a class="banner_link btn_link" type="/brand/detail/$IjN?brandId=62&brandName=BURBERRY&includeOutOfStock=false&sort=updatedAt&price=all&pageNo=1">
               <div class="name">
                 <figure>
                   <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/bn_txt_brand@2x.png" alt="Text BRAND">
@@ -189,15 +189,15 @@
 
               <div class="btn for_pc">
                 <figure>
-                  <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/bn_arrow@2x.png?w=1568" alt="btn sign">
+                  <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/bn_arrow@2x.png" alt="btn sign">
                 </figure>
               </div>
             </a>
           </div>
 
           <!-- news -->
-          <div class="banner">
-            <a class="banner_link" type="/brand/detail/$IjN?brandId=62&brandName=BURBERRY&includeOutOfStock=false&sort=updatedAt&price=all&pageNo=1">
+          <div class="banner banner_news">
+            <a class="banner_link btn_link" type="/brand/detail/$IjN?brandId=62&brandName=BURBERRY&includeOutOfStock=false&sort=updatedAt&price=all&pageNo=1">
               <div class="name">
                 <figure>
                   <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2056/bn_txt_news@2x.png" alt="Text NEWS">
@@ -213,7 +213,7 @@
 
               <div class="btn for_pc">
                 <figure>
-                  <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/bn_arrow@2x.png?w=1568" alt="btn sign">
+                  <img src="https://dcodeimages1.s3.ap-northeast-1.amazonaws.com/2099/bn_arrow@2x.png" alt="btn sign">
                 </figure>
               </div>
             </a>

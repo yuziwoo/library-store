@@ -78,6 +78,9 @@ body {
     word-break : keep-all;
     overflow-wrap : break-word;
 }
+figure {
+  line-height: 0;
+}
 
 /* Specific */
 /* Size display */
@@ -197,10 +200,10 @@ body {
     font-size: 14px;
   }
   .fs24 {
-    font-size: 15px;
+    font-size: 14px;
   }
   .fs26 {
-    font-size: 15px;
+    font-size: 14px;
   }
   .fs40 {
     font-size: 20px;
